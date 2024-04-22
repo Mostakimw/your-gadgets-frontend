@@ -1,6 +1,15 @@
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1400,
+    },
+  },
   palette: {
     primary: {
       main: "#1087B3",
@@ -18,11 +27,12 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          padding: "10px 30px",
+          // padding: "10px 30px",
           fontWeight: "600",
         },
       },
     },
+
     MuiContainer: {
       defaultProps: {
         maxWidth: "xl",

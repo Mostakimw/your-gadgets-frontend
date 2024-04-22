@@ -1,0 +1,73 @@
+{
+  "flash-sale": [
+    {
+      "id": "1",
+      "productCode": "SMX001",
+      "productName": "Samsung Galaxy S21",
+      "thumbnail": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1705515951-samsung-galaxy-s24-004-65a81b9ad2017.jpg?crop=0.700xw:0.934xh;0.139xw,0.0427xh&resize=980:*",
+      "image": ["s21_1.jpg", "s21_2.jpg", "s21_3.jpg"],
+      "price": 999.99,
+      "discount": 10,
+      "rating": 4.5,
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "description": "The Samsung Galaxy S21 is packed with cutting-edge features including a stunning 6.2-inch Dynamic AMOLED display, powerful Exynos 2100 processor, and versatile triple camera system. With its sleek design and advanced technology, the Galaxy S21 redefines what a smartphone can do."
+    },
+    {
+      "id": "2",
+      "productCode": "IPH002",
+      "productName": "iPhone 13 Pro",
+      "thumbnail": "https://images.samsung.com/is/image/samsung/p6pim/bd/sm-a156elbjbck/gallery/bd-galaxy-a15-5g-sm-a156-sm-a156elbjbck-thumb-541074308?$344_344_PNG$",
+      "image": ["iphone13pro_1.jpg", "iphone13pro_2.jpg", "iphone13pro_3.jpg"],
+      "price": 1099.99,
+      "discount": 15,
+      "rating": 4.7,
+      "brand": "Apple",
+      "category": "Smartphones",
+      "description": "The iPhone 13 Pro features the fastest chip ever in a smartphone, a stunning Pro camera system, and a Super Retina XDR display with ProMotion. It's designed to deliver uncompromising performance, reliability, and innovation."
+    },
+    {
+      "id": "3",
+      "productCode": "MAC003",
+      "productName": "MacBook Pro 16-inch",
+      "thumbnail": "https://auspost.com.au/shop/static/WFS/AusPost-Shop-Site/-/AusPost-Shop-auspost-B2CWebShop/en_AU/feat-cat/mobile-phones/always-on/category-tiles/MP_UnlockedPhones_3.jpg",
+      "image": [
+        "macbookpro_16_1.jpg",
+        "macbookpro_16_2.jpg",
+        "macbookpro_16_3.jpg"
+      ],
+      "price": 2399.99,
+      "discount": 30,
+      "rating": 4.8,
+      "brand": "Apple",
+      "category": "Laptops",
+      "description": "The MacBook Pro 16-inch is Apple's most powerful notebook yet. With a stunning Retina display, advanced graphics, and high-performance processors, it's the ultimate tool for creative professionals and power users."
+    },
+    {
+      "id": "4",
+      "productCode": "PIX004",
+      "productName": "Google Pixel 6 Pro",
+      "thumbnail": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1705515951-samsung-galaxy-s24-004-65a81b9ad2017.jpg?crop=0.700xw:0.934xh;0.139xw,0.0427xh&resize=980:*",
+      "image": ["pixel6pro_1.jpg", "pixel6pro_2.jpg", "pixel6pro_3.jpg"],
+      "price": 899.99,
+      "discount": 5,
+      "rating": 4.6,
+      "brand": "Google",
+      "category": "Smartphones",
+      "description": "The Google Pixel 6 Pro combines advanced camera technology, powerful performance, and Google's innovative software to deliver an exceptional smartphone experience. It's designed to help you capture, connect, and create like never before."
+    },
+    {
+      "id": "5",
+      "productCode": "WLSS005",
+      "productName": "Sony WH-1000XM4",
+      "thumbnail": "https://media.e-valy.com/cms/products/images/dd977586-dfa3-4890-b7e5-b794e121f6f9",
+      "image": ["wh1000xm4_1.jpg", "wh1000xm4_2.jpg", "wh1000xm4_3.jpg"],
+      "price": 349.99,
+      "discount": 20,
+      "rating": 4.9,
+      "brand": "Sony",
+      "category": "Headphones",
+      "description": "The Sony WH-1000XM4 is the pinnacle of noise-canceling headphones, featuring industry-leading noise cancellation, premium sound quality, and smart features like Adaptive Sound Control and Speak-to-Chat. It's the perfect companion for immersive listening experiences."
+    }
+  ]
+}
