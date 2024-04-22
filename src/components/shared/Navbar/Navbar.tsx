@@ -68,7 +68,8 @@ const Navbar = () => {
       {/* nav items start */}
       <Box
         sx={{
-          backgroundColor: "red",
+          // backgroundColor: "red",
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
         }}
       >
         <Container>

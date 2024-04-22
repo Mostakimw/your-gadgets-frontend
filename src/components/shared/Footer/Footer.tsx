@@ -12,7 +12,7 @@ const Footer = () => {
       style={{
         backgroundColor: "#F5F5F5",
         padding: "50px 0",
-        marginTop: "60px",
+        marginTop: "80px",
       }}
     >
       <Container>

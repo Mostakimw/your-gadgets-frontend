@@ -20,7 +20,6 @@ export const theme = createTheme({
         root: {
           padding: "10px 30px",
           fontWeight: "600",
-          //   color: "white",
         },
       },
     },
@@ -40,4 +39,4 @@ export const theme = createTheme({
   },
 });
 
-theme.shadows[1] = "0px 5px 22px lightgray";
+theme.shadows[1] = "0px 5px 22px lightGray";

@@ -9,7 +9,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Banner = () => {
   return (
     <Container>
-      <Grid container spacing={4} alignItems="center">
+      <Grid
+        container
+        spacing={4}
+        alignItems="center"
+        // marginTop={2}
+        sx={{ marginTop: { xs: 0, md: 4, lg: 2 } }}
+      >
         <Grid item xs={12} md={5}>
           <Typography variant="h4" fontWeight={600} color="body1">
             Crafting Comfort, Redefining Spaces. Home, Your Signature!
