@@ -18,7 +18,7 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          padding: "10px 30px",
+          // padding: "10px 30px",
           fontWeight: "600",
         },
       },
