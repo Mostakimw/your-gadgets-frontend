@@ -66,48 +66,56 @@ const Navbar = () => {
         Welcome to your gadgets
       </Box>
       {/* nav items start */}
-      <Container>
-        <Stack
-          marginTop={2}
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Box>
-            <Typography fontWeight={600} variant="h4">
-              Your{" "}
-              <Box component="span" color="primary.main">
-                Gadgets
-              </Box>
-            </Typography>
-          </Box>
+      <Box
+        sx={{
+          backgroundColor: "red",
+        }}
+      >
+        <Container>
           <Stack
             direction="row"
-            gap={4}
+            justifyContent="space-between"
             alignItems="center"
             sx={{
-              "& a:hover": {
-                color: "primary.main",
-                transition: "ease-in-out 0.6s",
-              },
-              display: {
-                xs: "none",
-                sm: "none",
-                md: "flex",
-                lg: "flex",
-                xl: "flex",
-              },
+              padding: "8px 0",
             }}
           >
-            {/* menu items */}
-            {menuItems}
+            <Box>
+              <Typography fontWeight={600} variant="h4">
+                Your{" "}
+                <Box component="span" color="primary.main">
+                  Gadgets
+                </Box>
+              </Typography>
+            </Box>
+            <Stack
+              direction="row"
+              gap={4}
+              alignItems="center"
+              sx={{
+                "& a:hover": {
+                  color: "primary.main",
+                  transition: "ease-in-out 0.6s",
+                },
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "flex",
+                  lg: "flex",
+                  xl: "flex",
+                },
+              }}
+            >
+              {/* menu items */}
+              {menuItems}
+            </Stack>
+            {/* Hamburger Menu */}
+            <Hidden mdUp>
+              <HamburgerMenu open={open} handleDrawerOpen={handleDrawerOpen} />
+            </Hidden>
           </Stack>
-          {/* Hamburger Menu */}
-          <Hidden mdUp>
-            <HamburgerMenu open={open} handleDrawerOpen={handleDrawerOpen} />
-          </Hidden>
-        </Stack>
-      </Container>
+        </Container>
+      </Box>
       {/* Drawer for Hamburger Menu */}
       <Hidden mdUp>
         <Drawer anchor="right" open={open} onClose={handleDrawerClose}>

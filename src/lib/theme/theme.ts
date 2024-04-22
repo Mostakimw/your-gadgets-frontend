@@ -18,7 +18,7 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          padding: "8px 24px",
+          padding: "10px 30px",
           fontWeight: "600",
           //   color: "white",
         },
@@ -26,7 +26,7 @@ export const theme = createTheme({
     },
     MuiContainer: {
       defaultProps: {
-        maxWidth: "lg",
+        maxWidth: "xl",
       },
     },
   },
