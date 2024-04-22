@@ -20,7 +20,12 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
   ).toFixed(2);
   return (
     <Grid item xs={12} sm={6} md={4} lg={2.4}>
-      <Card sx={{ height: "370px" }}>
+      <Card
+        sx={{
+          height: "380px",
+          position: "relative",
+        }}
+      >
         <Box sx={{ position: "relative" }}>
           <Image
             src={product?.thumbnail}
@@ -54,31 +59,44 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
           <Typography gutterBottom variant="h5" component="div">
             {product?.productName}
           </Typography>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
+
+          {/* product price and add to cart btn */}
+          <Box
+            sx={{
+              position: "absolute",
+              width: "100%",
+              bottom: 5,
+              left: 0,
+              padding: "0 16px",
+              zIndex: 1000,
+            }}
           >
-            <Stack direction="row" gap={1}>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                style={{ textDecoration: "line-through" }}
-              >
-                ${product?.price}
-              </Typography>
-              <Typography variant="body2">${discountPrice}</Typography>
-            </Stack>
-            <CardActions
-              sx={{
-                padding: "2px 0",
-              }}
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <Button size="small" title="Add To Cart">
-                <AddShoppingCartIcon></AddShoppingCartIcon>
-              </Button>
-            </CardActions>
-          </Stack>
+              <Stack direction="row" gap={1}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  ${product?.price}
+                </Typography>
+                <Typography variant="body2">${discountPrice}</Typography>
+              </Stack>
+              <CardActions
+                sx={{
+                  padding: "2px 0",
+                }}
+              >
+                <Button size="small" title="Add To Cart">
+                  <AddShoppingCartIcon></AddShoppingCartIcon>
+                </Button>
+              </CardActions>
+            </Stack>
+          </Box>
         </CardContent>
       </Card>
     </Grid>

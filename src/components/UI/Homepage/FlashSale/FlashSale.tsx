@@ -18,7 +18,7 @@ const FlashSale = async () => {
         <SectionTitle>Flash-Sale</SectionTitle>
         <Button variant="outlined">View all</Button>
       </Stack>
-      <Grid container spacing={4} marginTop={0}>
+      <Grid container spacing={3} marginTop={0}>
         {products.map((product: TProduct) => (
           <ProductCard key={product.id} product={product}></ProductCard>
         ))}
