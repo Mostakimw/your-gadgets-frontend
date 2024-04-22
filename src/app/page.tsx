@@ -1,11 +1,12 @@
+import Banner from "@/components/UI/Homepage/Banner/Banner";
 import Navbar from "@/components/shared/Navbar/Navbar";
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
 
 const HomePage = () => {
   return (
-    <>
+    <div>
       <Navbar />
-    </>
+      <Banner />
+    </div>
   );
 };
 
