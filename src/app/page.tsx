@@ -1,7 +1,13 @@
+import Banner from "@/components/UI/Homepage/Banner/Banner";
+import Footer from "@/components/shared/Footer/Footer";
+import Navbar from "@/components/shared/Navbar/Navbar";
+
 const HomePage = () => {
   return (
     <div>
-      <h1>welcome to homepage</h1>
+      <Navbar />
+      <Banner />
+      <Footer/>
     </div>
   );
 };
