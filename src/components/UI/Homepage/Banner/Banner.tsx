@@ -27,7 +27,7 @@ const Banner = () => {
             Your Signature Style!
           </Typography>
           <Stack direction="row" gap={2}>
-            <Button sx={{ padding: "10px 30px" }}>Shop Now</Button>
+            <Button sx={{ padding: {xs: "7px 20px", lg: "10px 30px" } }}>Shop Now</Button>
             <Button variant="outlined" sx={{ padding: "10px 30px" }}>
               Top Rated Items
             </Button>

@@ -1,15 +1,25 @@
 import { createTheme } from "@mui/material/styles";
+interface BreakpointOverrides  {
+  values: {
+    xs: number;
+    sm: number;
+    md: number;
+    lg: number;
+    xl: number;
+    xxl: number;
+  };
+}
 
 export const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
+      sm: 576,
+      md: 768,
+      lg: 992,
       xl: 1400,
     },
-  },
+  } as BreakpointOverrides ,
   palette: {
     primary: {
       main: "#1087B3",

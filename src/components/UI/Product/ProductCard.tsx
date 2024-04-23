@@ -22,15 +22,15 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
     <Grid item xs={12} sm={6} md={4} lg={2.4}>
       <Card
         sx={{
-          height: "380px",
+          height: { xs: "auto", sm: "380px" }, // Set height to auto for xs devices
           position: "relative",
         }}
       >
         <Box sx={{ position: "relative" }}>
           <Image
             src={product?.thumbnail}
-            width={300}
-            height={50}
+            width={500}
+            height={500}
             alt="product image"
           />
           <Box>
@@ -67,8 +67,9 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
               width: "100%",
               bottom: 5,
               left: 0,
-              padding: "0 16px",
-              zIndex: 1000,
+              padding: { xs: "0 16px", md: "0 16px" },
+              // TODO: Have to fix margin
+              marginTop: 20,
             }}
           >
             <Stack
@@ -92,7 +93,9 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
                 }}
               >
                 <Button size="small" title="Add To Cart">
-                  <AddShoppingCartIcon></AddShoppingCartIcon>
+                  <AddShoppingCartIcon
+                    style={{ padding: "0" }}
+                  ></AddShoppingCartIcon>
                 </Button>
               </CardActions>
             </Stack>

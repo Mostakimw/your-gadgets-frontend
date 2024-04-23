@@ -8,16 +8,21 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 
 const CategoryCard = ({ category }: { category: TCategory }) => {
   return (
-    <Grid item xs={6} sm={4} md={3} lg={2}>
-      <Card variant="outlined">
+    <Grid item xs={6} sm={6} md={4} lg={2}>
+      <Card variant="outlined" sx={{height:150, textAlign:"center"}}>
         <Stack
           direction="column"
           justifyContent="center"
           alignItems="center"
-          padding="30px 0"
+          padding="30px 10px"
+          component={Link}
+          href={`/category/${category?.name
+            .toLowerCase()
+            .replace(/\s+/g, "-")}`}
         >
           <CardMedia>
             <AcUnitIcon
@@ -28,7 +33,9 @@ const CategoryCard = ({ category }: { category: TCategory }) => {
               }}
             />
           </CardMedia>
-          <Typography variant="body2" fontWeight={600}>{category?.name}</Typography>
+          <Typography variant="body2" fontWeight={600}>
+            {category?.name}
+          </Typography>
         </Stack>
       </Card>
     </Grid>

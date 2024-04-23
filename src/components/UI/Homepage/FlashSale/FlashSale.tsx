@@ -4,9 +4,14 @@ import SectionTitle from "../../SectionTitle";
 import ProductCard from "../../Product/ProductCard";
 import { TProduct } from "@/types";
 import Link from "next/link";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const FlashSale = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale");
+  const res = await fetch("http://localhost:5000/flash-sale", {
+    next: {
+      revalidate: 30
+    }
+  });
   const products = await res.json();
   return (
     <Container
@@ -17,11 +22,8 @@ const FlashSale = async () => {
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <SectionTitle>Flash-Sale</SectionTitle>
         <Link href="/flash-sale">
-          <Button
-            variant="outlined"
-            size="small"
-          >
-            View all
+          <Button sx={{borderRadius: 100,padding: "7px 20px"}}>
+            View All <ChevronRightIcon />
           </Button>
         </Link>
       </Stack>
