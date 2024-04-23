@@ -69,5 +69,37 @@
       "category": "Headphones",
       "description": "The Sony WH-1000XM4 is the pinnacle of noise-canceling headphones, featuring industry-leading noise cancellation, premium sound quality, and smart features like Adaptive Sound Control and Speak-to-Chat. It's the perfect companion for immersive listening experiences."
     }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Smartphones",
+      "icon": "smartphone"
+    },
+    {
+      "id": "2",
+      "name": "Laptops",
+      "icon": "laptop"
+    },
+    {
+      "id": "3",
+      "name": "Headphones",
+      "icon": "headphones"
+    },
+    {
+      "id": "4",
+      "name": "Tablets",
+      "icon": "tablet"
+    },
+    {
+      "id": "5",
+      "name": "Wearables",
+      "icon": "wearable"
+    },
+    {
+      "id": "6",
+      "name": "Accessories",
+      "icon": "accessory"
+    }
   ]
 }
