@@ -22,7 +22,7 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
     <Grid item xs={12} sm={6} md={4} lg={2.4}>
       <Card
         sx={{
-          height: { xs: "auto", sm: "380px" }, // Set height to auto for xs devices
+          height: { xs: "auto", sm: "380px" }, 
           position: "relative",
         }}
       >
