@@ -1,15 +1,15 @@
 import Banner from "@/components/UI/Homepage/Banner/Banner";
+import Category from "@/components/UI/Homepage/Category/Category";
 import FlashSale from "@/components/UI/Homepage/FlashSale/FlashSale";
-import Footer from "@/components/shared/Footer/Footer";
-import Navbar from "@/components/shared/Navbar/Navbar";
+import Product from "@/components/UI/Product/Product";
 
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
       <Banner />
       <FlashSale />
-      <Footer />
+      <Category />
+      <Product />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 const SectionTitle = ({ children }: { children: React.ReactNode }) => {
   return (
     <Box sx={{ position: "relative", marginBottom: "20px" }}>
-      <Typography variant="h3" color="body2">
+      <Typography variant="h4" color="body2">
         {children}
       </Typography>
       <Box
