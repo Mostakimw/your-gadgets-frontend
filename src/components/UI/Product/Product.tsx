@@ -6,7 +6,11 @@ import Link from "next/link";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const Product = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale");
+  const res = await fetch("http://localhost:5000/flash-sale", {
+    next: {
+      revalidate: 30,
+    },
+  });
   const products = await res.json();
   return (
     <Container sx={{ marginTop: 12 }}>
@@ -16,11 +20,11 @@ const Product = async () => {
         // alignItems="center"
         marginBottom={2}
       >
-        <Box >
+        <Box>
           <SectionTitle>Most Trending Products</SectionTitle>
           <Typography
             variant="body2"
-                      sx={{ display: { xs: "none", sm: "block" }, maxWidth: 500 }}
+            sx={{ display: { xs: "none", sm: "block" }, maxWidth: 500 }}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
             fuga error debitis natus corrupti laboriosam debitis natus corrupti

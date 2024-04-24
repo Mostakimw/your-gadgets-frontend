@@ -5,7 +5,11 @@
       "productCode": "SMX001",
       "productName": "Samsung Galaxy S21",
       "thumbnail": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1705515951-samsung-galaxy-s24-004-65a81b9ad2017.jpg?crop=0.700xw:0.934xh;0.139xw,0.0427xh&resize=980:*",
-      "image": ["s21_1.jpg", "s21_2.jpg", "s21_3.jpg"],
+      "image": [
+        "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1705515951-samsung-galaxy-s24-004-65a81b9ad2017.jpg?crop=0.700xw:0.934xh;0.139xw,0.0427xh&resize=980:*",
+        "https://images.samsung.com/is/image/samsung/p6pim/bd/sm-a156elbjbck/gallery/bd-galaxy-a15-5g-sm-a156-sm-a156elbjbck-thumb-541074308?$344_344_PNG$",
+        "https://auspost.com.au/shop/static/WFS/AusPost-Shop-Site/-/AusPost-Shop-auspost-B2CWebShop/en_AU/feat-cat/mobile-phones/always-on/category-tiles/MP_UnlockedPhones_3.jpg"
+      ],
       "price": 999.99,
       "discount": 10,
       "rating": 4.5,

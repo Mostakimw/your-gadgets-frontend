@@ -23,11 +23,13 @@ export const theme = createTheme({
   palette: {
     primary: {
       main: "#1087B3",
+      light: "#192D46"
     },
     secondary: {
       main: "#D3D3D3",
       light: "#666f73",
     },
+
   },
 
   components: {
