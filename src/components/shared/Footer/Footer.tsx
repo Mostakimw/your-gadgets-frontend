@@ -20,11 +20,11 @@ const Footer = () => {
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">Services</Typography>
             <Stack direction="column" gap={1} marginTop={1}>
-              <Typography component={Link} href="#">
-                Branding
+              <Typography component={Link} href="/products">
+                Trending Products
               </Typography>
-              <Typography component={Link} href="#">
-                Design
+              <Typography component={Link} href="/categories">
+                Categories
               </Typography>
               <Typography component={Link} href="#">
                 Marketing
@@ -37,17 +37,17 @@ const Footer = () => {
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">Company</Typography>
             <Stack direction="column" gap={1} marginTop={1}>
-              <Typography component={Link} href="#">
-                About us
+              <Typography component={Link} href="/about-us">
+                About Us
+              </Typography>
+              <Typography component={Link} href="/contact-us">
+                Contact Us
               </Typography>
               <Typography component={Link} href="#">
-                Contact
+                Customer Care
               </Typography>
               <Typography component={Link} href="#">
                 Jobs
-              </Typography>
-              <Typography component={Link} href="#">
-                Press kit
               </Typography>
             </Stack>
           </Grid>
