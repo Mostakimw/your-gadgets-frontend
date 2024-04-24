@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import Link from "next/link";
 
 const ProductCard = async ({ product }: { product: TProduct }) => {
   const discountPrice = (
@@ -19,10 +20,18 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
     product.price * (product.discount / 100)
   ).toFixed(2);
   return (
-    <Grid item xs={12} sm={6} md={4} lg={2.4}>
+    <Grid
+      item
+      xs={12}
+      sm={6}
+      md={4}
+      lg={2.4}
+      component={Link}
+      href={`/products/${product.id}`}
+    >
       <Card
         sx={{
-          height: { xs: "auto", sm: "380px" }, 
+          height: { xs: "auto", sm: "380px" },
           position: "relative",
         }}
       >
