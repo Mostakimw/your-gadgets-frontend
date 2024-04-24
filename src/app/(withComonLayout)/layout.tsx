@@ -1,11 +1,12 @@
 import Footer from "@/components/shared/Footer/Footer";
 import Navbar from "@/components/shared/Navbar/Navbar";
+import { Box } from "@mui/material";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
-      {children}
+      <Box sx={{minHeight: "70vh"}}>{children}</Box>
       <Footer />
     </>
   );

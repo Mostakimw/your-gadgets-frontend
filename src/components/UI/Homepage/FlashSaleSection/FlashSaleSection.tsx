@@ -6,7 +6,7 @@ import { TProduct } from "@/types";
 import Link from "next/link";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const FlashSale = async () => {
+const FlashSaleSection = async () => {
   const res = await fetch("http://localhost:5000/flash-sale", {
     next: {
       revalidate: 30
@@ -36,4 +36,4 @@ const FlashSale = async () => {
   );
 };
 
-export default FlashSale;
+export default FlashSaleSection;
