@@ -14,7 +14,7 @@ import Image from "next/image";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Link from "next/link";
 
-const ProductCard = async ({ product }: { product: TProduct }) => {
+const FlashSaleItemCard = async ({ product }: { product: TProduct }) => {
   const discountPrice = (
     product.price -
     product.price * (product.discount / 100)
@@ -116,4 +116,4 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
   );
 };
 
-export default ProductCard;
+export default FlashSaleItemCard;

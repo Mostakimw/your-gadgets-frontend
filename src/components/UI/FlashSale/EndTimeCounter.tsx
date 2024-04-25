@@ -13,7 +13,7 @@ const EndTimeCounter = () => {
   // end time of the flash sale
   const endTime = new Date("2024-04-24T14:19:43.000Z");
 
-  // Calculate the remaining time until the flash sale ends
+  // calculate the remaining time until the flash sale ends
   const remainingTime = endTime.getTime() - Date.now();
 
   const formatTime = (time: number) => {

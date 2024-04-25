@@ -1,8 +1,8 @@
-import ProductCard from "@/components/UI/Product/ProductCard";
 import SectionTitle from "@/components/UI/SectionTitle";
 import { TProduct } from "@/types";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import EndTimeCounter from "@/components/UI/FlashSale/EndTimeCounter";
+import FlashSaleItemCard from "@/components/UI/FlashSale/FlashSaleItemCard";
 
 const FlashSalePage = async () => {
   const res = await fetch("http://localhost:5000/flash-sale", {
@@ -37,7 +37,7 @@ const FlashSalePage = async () => {
       </Stack>
       <Grid container spacing={3} marginTop={4}>
         {products.map((product: TProduct) => (
-          <ProductCard key={product.id} product={product}></ProductCard>
+          <FlashSaleItemCard key={product.id} product={product}></FlashSaleItemCard>
         ))}
       </Grid>
     </Container>

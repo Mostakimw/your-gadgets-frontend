@@ -39,6 +39,9 @@ const menuItems = (
     <Typography component={Link} href="/contact-us" fontWeight={600}>
       Contact Us
     </Typography>
+    <Typography component={Link} href="/dashboard" fontWeight={600}>
+      Dashboard
+    </Typography>
   </>
 );
 
