@@ -1,4 +1,3 @@
-"use client";
 import {
   FormControl,
   InputLabel,
@@ -10,7 +9,6 @@ import {
 import Link from "next/link";
 
 const brands = ["Apple", "Samsung"];
-const categories = ["Smartphones", "Monitor"];
 
 const ProductsPageFIltering = () => {
   return (
