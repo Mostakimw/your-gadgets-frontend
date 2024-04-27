@@ -7,9 +7,9 @@ const HomePage = () => {
   return (
     <div>
       <Banner />
-      {/* <FlashSaleSection /> */}
+      <FlashSaleSection />
       <Category />
-      {/* <Product /> */}
+      <Product />
     </div>
   );
 };

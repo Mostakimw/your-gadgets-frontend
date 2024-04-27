@@ -24,7 +24,7 @@ const menuItems = (
     <Typography component={Link} href="/" fontWeight={600}>
       Home
     </Typography>
-    <Typography component={Link} href="/products/categories" fontWeight={600}>
+    <Typography component={Link} href="/categories" fontWeight={600}>
       Categories
     </Typography>
     <Typography component={Link} href="/products" fontWeight={600}>

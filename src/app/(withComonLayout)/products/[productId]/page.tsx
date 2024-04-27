@@ -13,7 +13,7 @@ const generateStaticParams = async () => {
   const products = await res.json();
 
   return products.slice(0, 2).map((product: TProduct) => {
-    productId: product.id;
+    productId: product._id;
   });
 };
 

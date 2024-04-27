@@ -58,7 +58,7 @@ const Category = async () => {
         ))}
       </Grid>
       <Box textAlign="center">
-        <Link href="/products">
+        <Link href="/categories">
           <Button sx={{ borderRadius: 100, padding: "7px 20px" }}>
             View All <ChevronRightIcon />
           </Button>
