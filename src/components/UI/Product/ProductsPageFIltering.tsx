@@ -16,7 +16,7 @@ const ProductsPageFIltering = () => {
       <Typography variant="h6">Filter By:</Typography>
 
       {/* Brand */}
-      <FormControl fullWidth>
+      <FormControl sx={{maxWidth: 150}} >
         <InputLabel id="brand-select-label">Brand</InputLabel>
         <Select labelId="brand-select-label" id="brand-select" label="Brand">
           <MenuItem value="">All Brands</MenuItem>

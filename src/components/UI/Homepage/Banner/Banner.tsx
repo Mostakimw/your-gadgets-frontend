@@ -5,6 +5,7 @@ import banner1 from "@/assets/banner/banner1.jpg";
 import banner2 from "@/assets/banner/banner2.jpg";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -21,13 +22,10 @@ const Banner = () => {
             Crafting Comfort, Redefining Spaces. Home, Your Signature!
           </Typography>
           <Typography component="p" color="secondary.light" my={3}>
-            Crafting Comfort, Redefining Spaces. Your Home, Your Signature
-            Style! Crafting Comfort, Redefining Spaces. Your Home, Your
-            Signature Style! Crafting Comfort, Redefining Spaces. Your Home,
-            Your Signature Style!
+          Discover the Latest in Tech Innovation! Elevate Your Digital Experience with Cutting-Edge Gadgets. From Smartphones to Wearables, Laptops to Cameras, Find Your Perfect Tech Companion Here.
           </Typography>
           <Stack direction="row" gap={2}>
-            <Button sx={{ padding: {xs: "7px 20px", lg: "10px 30px" } }}>Shop Now</Button>
+            <Link href="/products"><Button sx={{ padding: {xs: "7px 20px", lg: "10px 30px" } }}>Shop Now</Button></Link>
             <Button variant="outlined" sx={{ padding: "10px 30px" }}>
               Top Rated Items
             </Button>

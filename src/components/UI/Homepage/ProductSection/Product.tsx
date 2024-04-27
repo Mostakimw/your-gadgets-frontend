@@ -26,9 +26,8 @@ const Product = async () => {
             variant="body2"
             sx={{ display: { xs: "none", sm: "block" }, maxWidth: 500 }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            fuga error debitis natus corrupti laboriosam debitis natus corrupti
-            laboriosam
+            Explore Trending Tech: Galaxy Pro Max, EliteBook Pro, Voyager
+            Tracker. Stay Ahead with Top-Rated Gadgets!
           </Typography>
         </Box>
         <Link href="/products">

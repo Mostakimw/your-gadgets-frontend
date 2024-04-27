@@ -10,6 +10,7 @@ export interface TProduct {
   images: string[];
   rating: number;
   numReviews: number;
+  discount: number;
 }
 
 export interface TCategory {

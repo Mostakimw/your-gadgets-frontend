@@ -8,8 +8,8 @@ const HomePage = () => {
     <div>
       <Banner />
       {/* <FlashSaleSection /> */}
-      {/* {/* <Category /> */}
-      <Product />
+      <Category />
+      {/* <Product /> */}
     </div>
   );
 };
