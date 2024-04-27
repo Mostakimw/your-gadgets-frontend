@@ -13,8 +13,10 @@ import FilterByPrice from "./Filter/FilterByPrice";
 import Link from "next/link";
 import { useState } from "react";
 
+const brands = ["Apple", "Samsung"];
+
 const ProductsPageFIltering = () => {
-  
+ 
   return (
     <Stack direction="column" spacing={2}>
       <Typography variant="h6">Filter By:</Typography>
@@ -28,13 +30,19 @@ const ProductsPageFIltering = () => {
         <Select
           labelId="brand-select-label"
           id="brand-select"
-          label="Brand"
+          label="Brand" 
         >
           <MenuItem value="">All Brands</MenuItem>
-          <Link href='?brand=Apple'><MenuItem value="Apple">Apple</MenuItem></Link>
-          
-
-         
+          {brands.map((brand, index) => (
+            <MenuItem key={index} value={brand}>
+              <Link
+                href={`?brand=${brand}`}
+                style={{ width: "100%", display: "block" }}
+              >
+                {brand}
+              </Link>
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
 

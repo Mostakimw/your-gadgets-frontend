@@ -15,7 +15,6 @@ const ProductsPage = async ({ searchParams }) => {
     res = await fetch(`${process.env.SERVER_URL}/products`);
   }
   const products = await res.json();
-  console.log(products);
 
   return (
     <Container sx={{ marginTop: 3 }}>
