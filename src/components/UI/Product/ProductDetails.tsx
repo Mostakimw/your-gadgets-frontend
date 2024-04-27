@@ -1,9 +1,11 @@
+import RatingReact from "react-rating";
 import {
   Box,
   Button,
   Container,
   Divider,
   Grid,
+  Rating,
   Stack,
   Typography,
 } from "@mui/material";
@@ -12,10 +14,9 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import { TProduct } from "@/types";
 import Image from "next/image";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 
 const ProductDetails = ({ product }: { product: TProduct }) => {
-  console.log(product);
-  console.log("hitting");
   return (
     <>
       <Grid container spacing={5}>
@@ -46,16 +47,25 @@ const ProductDetails = ({ product }: { product: TProduct }) => {
               $450
             </Typography>
             <Divider orientation="vertical" flexItem sx={{ height: "30px" }} />
-            <Typography>Review</Typography>
-            <Typography>(30 review)</Typography>
+            <Box>
+              <Rating
+                name="text-feedback"
+                value={product?.rating}
+                readOnly
+                precision={0.5}
+                emptyIcon={
+                  <StarBorderOutlinedIcon
+                    style={{ opacity: 0.55 }}
+                    fontSize="inherit"
+                  />
+                }
+              />
+            </Box>
+            <Typography>({product?.numReviews} review)</Typography>
           </Stack>
 
           <Typography variant="body1" marginTop={3}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ut!
-            Perferendis, est esse tempora adipisci, explicabo quaerat voluptatum
-            nihil consequuntur qui alias quis veritatis quasi a facere nisi.
-            Aliquid molestiae beatae esse corporis quibusdam officiis iusto et
-            incidunt animi porro.
+            {product?.description}
           </Typography>
 
           <Stack direction="row" gap={2} alignItems="center">
@@ -79,12 +89,17 @@ const ProductDetails = ({ product }: { product: TProduct }) => {
       </Grid>
       {/* specifications here */}
       <Box marginTop={10}>
-        <Typography variant="h4" sx={{ marginTop: 2 }}>
+        <Typography variant="h4" sx={{ marginTop: 2, marginBottom: 2 }}>
           Specifications
         </Typography>
         <Typography variant="body1" sx={{ maxWidth: 400 }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tenetur
-          dicta distinctio fugit non ad expedita illum, est nam vero?
+          Explore our vast selection of high-tech gadgets designed to elevate
+          your digital lifestyle. From powerful smartphones to sleek laptops,
+          immersive audio devices to intuitive smart home solutions, our range
+          boasts cutting-edge features, premium craftsmanship, and top-rated
+          performance. Stay ahead of the curve and indulge in quality with our
+          meticulously curated collection of innovative products tailored to
+          meet your every tech need.
         </Typography>
       </Box>
     </>
