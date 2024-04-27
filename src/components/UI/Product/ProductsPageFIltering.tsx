@@ -10,11 +10,11 @@ import {
   Typography,
 } from "@mui/material";
 import FilterByPrice from "./Filter/FilterByPrice";
+import Link from "next/link";
+import { useState } from "react";
 
 const ProductsPageFIltering = () => {
-  const handleBrandChange = (e) => {
-    console.log(e.target.value);
-  };
+  
   return (
     <Stack direction="column" spacing={2}>
       <Typography variant="h6">Filter By:</Typography>
@@ -31,7 +31,10 @@ const ProductsPageFIltering = () => {
           label="Brand"
         >
           <MenuItem value="">All Brands</MenuItem>
-          <MenuItem value="Apple">Apple</MenuItem>
+          <Link href='?brand=Apple'><MenuItem value="Apple">Apple</MenuItem></Link>
+          
+
+         
         </Select>
       </FormControl>
 

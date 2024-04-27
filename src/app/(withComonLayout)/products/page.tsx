@@ -3,15 +3,19 @@ import ProductsPageFIltering from "@/components/UI/Product/ProductsPageFIltering
 import SectionTitle from "@/components/UI/SectionTitle";
 import { TProduct } from "@/types";
 import { Container, Grid, Stack } from "@mui/material";
-import React, { useState } from "react";
 
-const ProductsPage = async () => {
-  const res = await fetch(`${process.env.SERVER_URL}/products`, {
-    next: {
-      revalidate: 30,
-    },
-  });
+const ProductsPage = async ({ searchParams }) => {
+  let res;
+  if (Object.keys(searchParams).length > 0) {
+    res = await fetch(
+      `${process.env.SERVER_URL}/products?brand=${searchParams.brand}`
+    );
+    console.log(searchParams.brand.toString());
+  } else {
+    res = await fetch(`${process.env.SERVER_URL}/products`);
+  }
   const products = await res.json();
+  console.log(products);
 
   return (
     <Container sx={{ marginTop: 3 }}>
