@@ -1,37 +1,26 @@
 "use client";
 import {
-  Box,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
-  Slider,
   Stack,
   Typography,
 } from "@mui/material";
-import FilterByPrice from "./Filter/FilterByPrice";
 import Link from "next/link";
-import { useState } from "react";
 
 const brands = ["Apple", "Samsung"];
+const categories = ["Smartphones", "Monitor"];
 
 const ProductsPageFIltering = () => {
- 
   return (
-    <Stack direction="column" spacing={2}>
+    <Stack direction="column" spacing={2} marginBottom={3}>
       <Typography variant="h6">Filter By:</Typography>
-
-      {/* Price Range */}
-      {/* <FilterByPrice /> */}
 
       {/* Brand */}
       <FormControl fullWidth>
         <InputLabel id="brand-select-label">Brand</InputLabel>
-        <Select
-          labelId="brand-select-label"
-          id="brand-select"
-          label="Brand" 
-        >
+        <Select labelId="brand-select-label" id="brand-select" label="Brand">
           <MenuItem value="">All Brands</MenuItem>
           {brands.map((brand, index) => (
             <MenuItem key={index} value={brand}>
@@ -49,17 +38,18 @@ const ProductsPageFIltering = () => {
       {/* Category */}
       {/* <FormControl fullWidth>
         <InputLabel id="category-select-label">Category</InputLabel>
-        <Select labelId="category-select-label" id="category-select">
+        <Select labelId="category-select-label" id="category-select" label="Category">
           <MenuItem value="">All Categories</MenuItem>
-        </Select>
-      </FormControl> */}
-
-      {/* Sort By Rating */}
-      {/* <FormControl fullWidth>
-        <InputLabel id="rating-sort-label">Sort By Rating</InputLabel>
-        <Select labelId="rating-sort-label" id="rating-sort">
-          <MenuItem value="highest-rated">Highest Rated</MenuItem>
-          <MenuItem value="lowest-rated">Lowest Rated</MenuItem>
+          {categories.map((category, index) => (
+            <MenuItem key={index} value={category}>
+              <Link
+                href={`?category=${category}`}
+                style={{ width: "100%", display: "block" }}
+              >
+                {category}
+              </Link>
+            </MenuItem>
+          ))}
         </Select>
       </FormControl> */}
     </Stack>

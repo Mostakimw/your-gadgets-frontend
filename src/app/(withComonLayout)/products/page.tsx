@@ -5,16 +5,17 @@ import { TProduct } from "@/types";
 import { Container, Grid, Stack } from "@mui/material";
 
 const ProductsPage = async ({ searchParams }) => {
+  console.log(searchParams);
   let res;
   if (Object.keys(searchParams).length > 0) {
     res = await fetch(
-      `${process.env.SERVER_URL}/products?brand=${searchParams.brand}`
+      `${process.env.SERVER_URL}/products?category=${searchParams.category}`
     );
-    console.log(searchParams.brand.toString());
   } else {
     res = await fetch(`${process.env.SERVER_URL}/products`);
   }
   const products = await res.json();
+  console.log(products);
 
   return (
     <Container sx={{ marginTop: 3 }}>
