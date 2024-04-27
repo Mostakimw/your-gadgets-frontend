@@ -19,7 +19,7 @@ const generateStaticParams = async () => {
 
 const ProductDetailsPage = async ({ params }: TProductId) => {
   const res = await fetch(
-    `${process.env.SERVER_URL}/${params?.productId}`
+    `http://localhost:5000/api/v1/products/${params?.productId}`
   );
   const product = await res.json();
 

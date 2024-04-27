@@ -11,13 +11,23 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import { TProduct } from "@/types";
+import Image from "next/image";
 
 const ProductDetails = ({ product }: { product: TProduct }) => {
+  console.log(product);
+  console.log("hitting");
   return (
     <>
       <Grid container spacing={5}>
         <Grid item xs={12} sm={5}>
-          <Typography variant="h4">Images Here</Typography>
+          <Box>
+            <Image
+              src={product?.thumbnail}
+              width={500}
+              height={500}
+              alt={product?.productName}
+            />
+          </Box>
         </Grid>
         <Grid item xs={12} sm={7}>
           <Stack
