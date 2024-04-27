@@ -30,8 +30,9 @@ const rows = [
 ];
 
 const AllProducts = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale");
+  const res = await fetch(`${process.env.SERVER_URL}/products`);
   const products = await res.json();
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ width: "100%" }} aria-label="simple table">
@@ -42,6 +43,9 @@ const AllProducts = async () => {
             </TableCell>
             <TableCell align="left">
               <Typography fontWeight={600}>Category</Typography>
+            </TableCell>
+            <TableCell align="left">
+              <Typography fontWeight={600}>Code</Typography>
             </TableCell>
             <TableCell align="left">
               <Typography fontWeight={600}>Price</Typography>
@@ -57,19 +61,20 @@ const AllProducts = async () => {
         <TableBody>
           {products.map((product: TProduct) => (
             <TableRow
-              key={product.id}
+              key={product._id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
                 {product.productName}
               </TableCell>
+              <TableCell align="left">{product.category}</TableCell>
               <TableCell align="left">{product.productCode}</TableCell>
               <TableCell align="left">${product.price}</TableCell>
               <TableCell align="left">
                 <BorderColorOutlinedIcon />
               </TableCell>
               <TableCell align="left">
-                <DeleteOutlinedIcon sx={{color: "red"}}/>
+                <DeleteOutlinedIcon sx={{ color: "red" }} />
               </TableCell>
             </TableRow>
           ))}

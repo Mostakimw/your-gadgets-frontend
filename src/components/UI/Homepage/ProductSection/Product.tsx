@@ -1,12 +1,12 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
-import SectionTitle from "../SectionTitle";
-import ProductCard from "./ProductCard";
+import SectionTitle from "../../SectionTitle";
+import ProductCard from "../../Product/ProductCard";
 import { TProduct } from "@/types";
 import Link from "next/link";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const Product = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale", {
+  const res = await fetch(`${process.env.SERVER_URL}/top-products`, {
     next: {
       revalidate: 30,
     },
@@ -38,8 +38,8 @@ const Product = async () => {
         </Link>
       </Stack>
       <Grid container spacing={3} marginTop={0}>
-        {products.map((product: TProduct) => (
-          <ProductCard key={product.id} product={product}></ProductCard>
+        {products.slice(0, 5).map((product: TProduct) => (
+          <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </Grid>
     </Container>

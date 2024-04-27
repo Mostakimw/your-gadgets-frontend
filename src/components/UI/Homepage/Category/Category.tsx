@@ -6,7 +6,7 @@ import Link from "next/link";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Category = async () => {
-  const res = await fetch("http://localhost:5000/categories");
+  const res = await fetch(`${process.env.SERVER_URL}/products`);
   const categories = await res.json();
   return (
     <Container

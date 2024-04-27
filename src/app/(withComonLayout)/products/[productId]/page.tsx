@@ -9,7 +9,7 @@ interface TProductId {
 }
 
 const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale");
+  const res = await fetch(`${process.env.SERVER_URL}/products`);
   const products = await res.json();
 
   return products.slice(0, 2).map((product: TProduct) => {
@@ -19,7 +19,7 @@ const generateStaticParams = async () => {
 
 const ProductDetailsPage = async ({ params }: TProductId) => {
   const res = await fetch(
-    `http://localhost:5000/flash-sale/${params?.productId}`
+    `${process.env.SERVER_URL}/${params?.productId}`
   );
   const product = await res.json();
 

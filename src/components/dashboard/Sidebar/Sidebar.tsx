@@ -15,7 +15,7 @@ const Sidebar = () => {
     >
       <Stack>
         <Box>
-          <Typography fontWeight={600} variant="h4">
+          <Typography component={Link} href="/" fontWeight={600} variant="h4">
             Your{" "}
             <Box component="span" color="primary.main">
               Gadgets

@@ -5,7 +5,7 @@ import EndTimeCounter from "@/components/UI/FlashSale/EndTimeCounter";
 import FlashSaleItemCard from "@/components/UI/FlashSale/FlashSaleItemCard";
 
 const FlashSalePage = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale", {
+  const res = await fetch(`${process.env.SERVER_URL}/products`, {
     next: {
       revalidate: 30,
     },
@@ -37,7 +37,7 @@ const FlashSalePage = async () => {
       </Stack>
       <Grid container spacing={3} marginTop={4}>
         {products.map((product: TProduct) => (
-          <FlashSaleItemCard key={product.id} product={product}></FlashSaleItemCard>
+          <FlashSaleItemCard key={product._id} product={product}></FlashSaleItemCard>
         ))}
       </Grid>
     </Container>

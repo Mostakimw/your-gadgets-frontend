@@ -1,0 +1,242 @@
+[
+  {
+    "productCode": "PRD001",
+    "productName": "Galaxy Pro Max",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Unleash the power of innovation with the Galaxy Pro Max. With cutting-edge features and a stunning design, it's the ultimate smartphone for tech enthusiasts.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/dd977586-dfa3-4890-b7e5-b794e121f6f9",
+    "images": [
+      "https://example.com/product-x-image1.jpg",
+      "https://example.com/product-x-image2.jpg",
+      "https://example.com/product-x-image3.jpg"
+    ],
+    "rating": 4.5,
+    "numReviews": 10
+  },
+  {
+    "productCode": "PRD002",
+    "productName": "EliteBook Pro",
+    "brand": "HP",
+    "category": "Laptops",
+    "price": 1299,
+    "description": "Maximize productivity with the EliteBook Pro. With its premium design, powerful performance, and security features, it's the perfect choice for professionals.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/7f6e89b9-5c3f-46e2-85a4-ff98b6b86051",
+    "images": [
+      "https://example.com/laptop-z-image1.jpg",
+      "https://example.com/laptop-z-image2.jpg",
+      "https://example.com/laptop-z-image3.jpg"
+    ],
+    "rating": 4.8,
+    "numReviews": 15
+  },
+  {
+    "productCode": "PRD003",
+    "productName": "Voyager Fitness Tracker",
+    "brand": "FitBit",
+    "category": "Wearable Tech",
+    "price": 149,
+    "description": "Achieve your fitness goals with the Voyager Fitness Tracker. Track your steps, monitor your heart rate, and stay connected on the go.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.3,
+    "numReviews": 8
+  },
+  {
+    "productCode": "PRD004",
+    "productName": "SoundWave True Wireless Earbuds",
+    "brand": "Sony",
+    "category": "Audio",
+    "price": 199,
+    "description": "Immerse yourself in crystal-clear sound with the SoundWave True Wireless Earbuds. Enjoy wireless freedom and superior audio quality wherever you go.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.7,
+    "numReviews": 12
+  },
+  {
+    "productCode": "PRD005",
+    "productName": "ZenBook Pro Duo",
+    "brand": "ASUS",
+    "category": "Laptops",
+    "price": 1999,
+    "description": "Experience unmatched creativity with the ZenBook Pro Duo. With its dual-screen design and powerful performance, it's the ultimate laptop for content creators.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.9,
+    "numReviews": 20
+  },
+  {
+    "productCode": "PRD006",
+    "productName": "AirPods Max",
+    "brand": "Apple",
+    "category": "Audio",
+    "price": 549,
+    "description": "Immerse yourself in rich, detailed sound with AirPods Max. With high-fidelity audio, adaptive EQ, and active noise cancellation, it's the ultimate listening experience.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.6,
+    "numReviews": 18
+  },
+  {
+    "productCode": "PRD007",
+    "productName": "GamerX Gaming Laptop",
+    "brand": "MSI",
+    "category": "Laptops",
+    "price": 1799,
+    "description": "Dominate the competition with the GamerX Gaming Laptop. With its high-performance hardware and advanced cooling system, it's built for serious gaming.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.9,
+    "numReviews": 25
+  },
+  {
+    "productCode": "PRD008",
+    "productName": "Echo Dot",
+    "brand": "Amazon",
+    "category": "Smart Home",
+    "price": 49,
+    "description": "Make your home smarter with the Echo Dot. Control your smart devices, play music, set alarms, and much more with just your voice.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.2,
+    "numReviews": 14
+  },
+  {
+    "productCode": "PRD009",
+    "productName": "GoPro Hero9 Black",
+    "brand": "GoPro",
+    "category": "Action Cameras",
+    "price": 449,
+    "description": "Capture every adventure in stunning detail with the GoPro Hero9 Black. With its advanced features and rugged design, it's the ultimate action camera.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.8,
+    "numReviews": 20
+  },
+  {
+    "productCode": "PRD010",
+    "productName": "Surface Pro 7",
+    "brand": "Microsoft",
+    "category": "Tablets",
+    "price": 899,
+    "description": "Experience versatility and performance with the Surface Pro 7. With its powerful processor and lightweight design, it's the perfect companion for work or play.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.6,
+    "numReviews": 18
+  },
+  {
+    "productCode": "PRD011",
+    "productName": "Oculus Quest 2",
+    "brand": "Oculus",
+    "category": "VR Headsets",
+    "price": 299,
+    "description": "Step into the world of virtual reality with Oculus Quest 2. With its advanced optics and immersive experiences, it's the ultimate VR headset for gaming and entertainment.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.7,
+    "numReviews": 22
+  },
+  {
+    "productCode": "PRD012",
+    "productName": "Nest Thermostat",
+    "brand": "Google",
+    "category": "Smart Home",
+    "price": 249,
+    "description": "Take control of your home's temperature with the Nest Thermostat. With its smart features and energy-saving capabilities, it helps you stay comfortable while saving energy.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.5,
+    "numReviews": 16
+  },
+  {
+    "productCode": "PRD013",
+    "productName": "Canon EOS R5",
+    "brand": "Canon",
+    "category": "Cameras",
+    "price": 3899,
+    "description": "Capture stunning images and videos with the Canon EOS R5. With its advanced autofocus and 8K video capabilities, it's the perfect camera for professionals and enthusiasts alike.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.9,
+    "numReviews": 30
+  },
+  {
+    "productCode": "APP153",
+    "productName": "Apple 15 pro max",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "price": 299,
+    "description": "Immerse yourself in music with the Bose QuietComfort 35 II. With world-class noise cancellation and superior sound quality, it's the perfect companion for travel and everyday use.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.7,
+    "numReviews": 25
+  },
+  {
+    "productCode": "PRD015",
+    "productName": "DJI Mavic Air 2",
+    "brand": "DJI",
+    "category": "Drones",
+    "price": 799,
+    "description": "Capture breathtaking aerial shots with the DJI Mavic Air 2. With its advanced camera and intelligent flight modes, it's the perfect drone for photography and videography enthusiasts.",
+    "thumbnail": "https://media.e-valy.com/cms/products/images/1d678a39-5d91-42ae-b3d2-1b294a8b8edf",
+    "images": [
+      "https://example.com/smartwatch-a-image1.jpg",
+      "https://example.com/smartwatch-a-image2.jpg",
+      "https://example.com/smartwatch-a-image3.jpg"
+    ],
+    "rating": 4.8,
+    "numReviews": 20
+  }
+]
