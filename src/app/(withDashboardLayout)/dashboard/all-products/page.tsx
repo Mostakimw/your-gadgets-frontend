@@ -1,10 +1,11 @@
 import AllProducts from "@/components/dashboard/AllProducts/AllProducts";
-import React from "react";
 
-const AllProductsPage = () => {
+const AllProductsPage = async() => {
+  const res = await fetch(`${process.env.SERVER_URL}/products`);
+  const products = await res.json();
   return (
     <>
-      <AllProducts />
+      <AllProducts products={products} />
     </>
   );
 };

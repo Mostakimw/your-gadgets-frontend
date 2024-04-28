@@ -1,4 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { FormEvent } from "react";
 
 const priceRanges = [
   { label: "$100 to $200", value: [100, 200] },
@@ -7,7 +8,7 @@ const priceRanges = [
 ];
 
 const FilterByPrice = () => {
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { value: any; }; }) => {
     const selectedIndex = event.target.value;
     const selectedPriceRange = priceRanges[selectedIndex].value;
     console.log(selectedPriceRange);
