@@ -10,7 +10,7 @@ const SingleCategoryPage = async ({ params }: TCategoryName) => {
   const categoryName =
     params.categoryName.charAt(0).toUpperCase() + params.categoryName.slice(1);
   const res = await fetch(
-    `http://localhost:5000/api/v1/products?category=${categoryName}`
+    `${process.env.SERVER_URL}/products?category=${categoryName}`
   );
   const products = await res.json();
 

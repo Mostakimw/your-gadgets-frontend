@@ -17,7 +17,7 @@ const ProductsPage = async ({
   let res;
   if (Object.keys(searchParams).length > 0) {
     res = await fetch(
-      `http://localhost:5000/api/v1/products?brand=${searchParams?.brand}`
+      `${process.env.SERVER_URL}/products?brand=${searchParams?.brand}`
     );
   } else {
     res = await fetch(`${process.env.SERVER_URL}/products`);

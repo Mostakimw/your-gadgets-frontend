@@ -22,7 +22,8 @@
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^18",
     "react-rating": "^2.0.5",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@types/node": "^20",
