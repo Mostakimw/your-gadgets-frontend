@@ -41,6 +41,6 @@ To run this project locally, follow these steps:
 
 Once you have installed the dependencies, you can start the development server by running:
 
-     ```bash
+     ``` bash
     npm run dev
     ```
