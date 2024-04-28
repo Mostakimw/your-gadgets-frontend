@@ -60,10 +60,10 @@ const Navbar = () => {
           backgroundColor: "primary.main",
           textAlign: "center",
           py: 2,
-          color: "secondary.main",
+          color: "white",
         }}
       >
-        Welcome to your gadgets
+        <h1 className='font-bold text-2xl text-center font-mono'>Welcome to your gadgets</h1>
       </Box>
       {/* nav items start */}
       <Box
@@ -81,7 +81,7 @@ const Navbar = () => {
               padding: "8px 0",
             }}
           >
-            <Box>
+            <Box component={Link} href="/">
               <Typography fontWeight={600} variant="h4">
                 Your{" "}
                 <Box component="span" color="primary.main">

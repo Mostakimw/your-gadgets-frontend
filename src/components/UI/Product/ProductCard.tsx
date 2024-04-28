@@ -77,7 +77,6 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
               bottom: 45,
               left: 0,
               padding: { xs: "0 16px", md: "0 16px" },
-              // TODO: Have to fix margin
               marginTop: 20,
             }}
           >
@@ -92,7 +91,6 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
               bottom: 5,
               left: 0,
               padding: { xs: "0 16px", md: "0 16px" },
-              // TODO: Have to fix margin
               marginTop: 20,
             }}
           >

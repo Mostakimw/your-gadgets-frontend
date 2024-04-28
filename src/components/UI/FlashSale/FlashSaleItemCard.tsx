@@ -5,7 +5,6 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardMedia,
   Grid,
   Stack,
   Typography,
@@ -27,7 +26,7 @@ const FlashSaleItemCard = async ({ product }: { product: TProduct }) => {
       md={4}
       lg={2.4}
       component={Link}
-      href={`/products/${product.id}`}
+      href={`/products/${product._id}`}
     >
       <Card
         sx={{
@@ -77,7 +76,6 @@ const FlashSaleItemCard = async ({ product }: { product: TProduct }) => {
               bottom: 5,
               left: 0,
               padding: { xs: "0 16px", md: "0 16px" },
-              // TODO: Have to fix margin
               marginTop: 20,
             }}
           >

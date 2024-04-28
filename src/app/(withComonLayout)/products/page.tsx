@@ -3,7 +3,6 @@ import ProductsPageFIltering from "@/components/UI/Product/ProductsPageFIltering
 import SectionTitle from "@/components/UI/SectionTitle";
 import { TProduct } from "@/types";
 import { Container, Grid, Stack } from "@mui/material";
-import { ReadonlyURLSearchParams } from "next/navigation";
 import React from "react";
 
 interface TSearchParams {

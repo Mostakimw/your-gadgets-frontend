@@ -45,7 +45,7 @@ const Product = async () => {
         </Box>
       </Stack>
       <Grid container spacing={3} marginTop={0}>
-        {products.slice(0, 5).map((product: TProduct) => (
+        {products.slice(0, 6).map((product: TProduct) => (
           <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </Grid>
