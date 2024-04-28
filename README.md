@@ -1,5 +1,7 @@
 # Your Gadget Website (Electronic Gadgets Shop)
 
+Live site: [https://gadgets-shine.vercel.app/](https://gadgets-shine.vercel.app/)
+
 Welcome to your gadget website! This repository contains the source code for our website built with TypeScript, Next.js, and Material-UI (MUI). 
 
 ## Overview
@@ -41,6 +43,7 @@ To run this project locally, follow these steps:
 
 Once you have installed the dependencies, you can start the development server by running:
 
-     ``` bash
+     ```bash
+     
     npm run dev
     ```
