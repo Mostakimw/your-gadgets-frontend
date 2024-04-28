@@ -40,6 +40,6 @@ To run this project locally, follow these steps:
 ## Usage
 
 Once you have installed the dependencies, you can start the development server by running:
-     ```json
+     ```bash
     npm run dev
     ```
