@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Stack } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import SectionTitle from "../../SectionTitle";
 import ProductCard from "../../Product/ProductCard";
 import { TProduct } from "@/types";
@@ -21,6 +21,7 @@ const FlashSaleSection = async () => {
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <SectionTitle>Flash-Sale</SectionTitle>
+        {/* <Typography variant="body2">Limited Time Offer</Typography> */}
         <Link href="/flash-sale">
           <Button sx={{ borderRadius: 100, padding: "7px 20px" }}>
             View All <ChevronRightIcon />

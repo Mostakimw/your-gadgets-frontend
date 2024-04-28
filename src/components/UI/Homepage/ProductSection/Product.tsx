@@ -17,11 +17,12 @@ const Product = async () => {
       <Stack
         direction="row"
         justifyContent="space-between"
+        gap={10}
         // alignItems="center"
         marginBottom={2}
       >
         <Box>
-          <SectionTitle>Most Trending Products</SectionTitle>
+          <SectionTitle>Trending Products</SectionTitle>
           <Typography
             variant="body2"
             sx={{ display: { xs: "none", sm: "block" }, maxWidth: 500 }}
@@ -30,11 +31,18 @@ const Product = async () => {
             Tracker. Stay Ahead with Top-Rated Gadgets!
           </Typography>
         </Box>
-        <Link href="/products">
-          <Button sx={{ borderRadius: 100, padding: "7px 20px" }}>
-            View All <ChevronRightIcon />
-          </Button>
-        </Link>
+        <Box sx={{ flexShrink: 0 }}>
+          <Link href="/products">
+            <Button
+              sx={{
+                borderRadius: 100,
+                padding: "7px 20px",
+              }}
+            >
+              View All <ChevronRightIcon />
+            </Button>
+          </Link>
+        </Box>
       </Stack>
       <Grid container spacing={3} marginTop={0}>
         {products.slice(0, 5).map((product: TProduct) => (

@@ -17,25 +17,39 @@ const Banner = () => {
         // marginTop={2}
         sx={{ marginTop: { xs: 0, md: 4, lg: 2 } }}
       >
-        <Grid item xs={12} md={5}>
+        <Grid
+          item
+          md={12}
+          lg={5}
+          sx={{ order: { xs: 2, md: 2, lg: 1 }, marginTop: { xs: 7} }}
+        >
           <Typography variant="h4" fontWeight={600} color="body1">
             Crafting Comfort, Redefining Spaces. Home, Your Signature!
           </Typography>
           <Typography component="p" color="secondary.light" my={3}>
-          Discover the Latest in Tech Innovation! Elevate Your Digital Experience with Cutting-Edge Gadgets. From Smartphones to Wearables, Laptops to Cameras, Find Your Perfect Tech Companion Here.
+            Discover the Latest in Tech Innovation! Elevate Your Digital
+            Experience with Cutting-Edge Gadgets. From Smartphones to Wearables,
+            Laptops to Cameras, Find Your Perfect Tech Companion Here.
           </Typography>
           <Stack direction="row" gap={2}>
-            <Link href="/products"><Button sx={{ padding: {xs: "7px 20px", lg: "10px 30px" } }}>Shop Now</Button></Link>
+            <Link href="/products">
+              <Button sx={{ padding: { xs: "7px 20px", lg: "10px 30px" } }}>
+                Shop Now
+              </Button>
+            </Link>
             <Button variant="outlined" sx={{ padding: "10px 30px" }}>
               Top Rated Items
             </Button>
           </Stack>
         </Grid>
+        {/* carousel */}
         <Grid
           item
           xs={12}
-          md={7}
+          md={12}
+          lg={7}
           sx={{
+            order: { md: 1, lg: 2 },
             height: "70vh",
             width: "60vw",
             marginTop: 5,

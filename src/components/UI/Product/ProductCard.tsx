@@ -15,7 +15,6 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Link from "next/link";
 
 const ProductCard = async ({ product }: { product: TProduct }) => {
-
   const discountPrice = (
     product.price -
     product.price * (product.discount / 100)
@@ -33,7 +32,7 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
     >
       <Card
         sx={{
-          height: { xs: "auto", sm: "380px" },
+          height: { xs: "430px", sm: "380px" },
           position: "relative",
         }}
       >
@@ -66,9 +65,22 @@ const ProductCard = async ({ product }: { product: TProduct }) => {
         <CardContent
           style={{
             paddingBottom: "10px",
+            height: "100%",
           }}
         >
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            gutterBottom
+            variant="h5"
+            sx={{
+              position: "absolute",
+              width: "100%",
+              bottom: 45,
+              left: 0,
+              padding: { xs: "0 16px", md: "0 16px" },
+              // TODO: Have to fix margin
+              marginTop: 20,
+            }}
+          >
             {product?.productName}
           </Typography>
 

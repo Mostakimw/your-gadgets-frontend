@@ -101,7 +101,7 @@ const Navbar = () => {
                 display: {
                   xs: "none",
                   sm: "none",
-                  md: "flex",
+                  md: "none",
                   lg: "flex",
                   xl: "flex",
                 },
@@ -111,14 +111,14 @@ const Navbar = () => {
               {menuItems}
             </Stack>
             {/* Hamburger Menu */}
-            <Hidden mdUp>
+            <Hidden lgUp>
               <HamburgerMenu open={open} handleDrawerOpen={handleDrawerOpen} />
             </Hidden>
           </Stack>
         </Container>
       </Box>
       {/* Drawer for Hamburger Menu */}
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Drawer anchor="right" open={open} onClose={handleDrawerClose}>
           <List>
             <ListItem sx={{ width: 300 }}>
@@ -147,7 +147,7 @@ const Navbar = () => {
 const HamburgerMenu = ({ handleDrawerOpen }: THamburgerMenuProps) => {
   return (
     <IconButton
-      sx={{ display: { sm: "block", md: "none" } }}
+      sx={{ display: { md: "block", lg: "none" } }}
       onClick={handleDrawerOpen}
     >
       <MenuIcon />
