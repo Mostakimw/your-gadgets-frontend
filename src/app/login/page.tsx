@@ -1,4 +1,6 @@
+import assets from "@/assets";
 import { Box, Stack, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 const LoginPage = () => {
@@ -46,7 +48,20 @@ const LoginPage = () => {
               height: "full",
             }}
           >
-            <Typography>Hello</Typography>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              height="100%"
+              // sx={{ backgroundColor: "red" }}
+            >
+              <Image
+                src={assets.login}
+                height={300}
+                width={300}
+                alt="Login Image"
+              />
+            </Box>
           </Box>
         </Stack>
       </Box>
