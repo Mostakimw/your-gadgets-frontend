@@ -39,6 +39,9 @@ const menuItems = (
     <Typography component={Link} href="/dashboard" fontWeight={600}>
       Dashboard
     </Typography>
+    <Typography component={Link} href="/login" fontWeight={600}>
+      Login
+    </Typography>
   </>
 );
 
@@ -63,7 +66,9 @@ const Navbar = () => {
           color: "white",
         }}
       >
-        <h1 className='font-bold text-2xl text-center font-mono'>Welcome to your gadgets</h1>
+        <h1 className="font-bold text-2xl text-center font-mono">
+          Welcome to Gadgets Shine
+        </h1>
       </Box>
       {/* nav items start */}
       <Box
@@ -83,9 +88,9 @@ const Navbar = () => {
           >
             <Box component={Link} href="/">
               <Typography fontWeight={600} variant="h4">
-                Your{" "}
+                Gadgets{" "}
                 <Box component="span" color="primary.main">
-                  Gadgets
+                  Shine
                 </Box>
               </Typography>
             </Box>
