@@ -1,15 +1,28 @@
+// "use client";
+
 import React from "react";
+import {
+  FieldValues,
+  FormProvider,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form";
 
 type TMyFormProps = {
   children: React.ReactNode;
-  // onSubmit: Sub
+  onSubmit: SubmitHandler<FieldValues>;
 };
 
-const MyForm = ({ children }: TMyFormProps) => {
+const MyForm = ({ children, onSubmit }: TMyFormProps) => {
+  const methods = useForm();
+  const submit: SubmitHandler<FieldValues> = (data) => {
+    onSubmit(data);
+  };
+
   return (
-    <div>
-      <form>{children}</form>
-    </div>
+    <FormProvider {...methods}>
+      <form onSubmit={methods.handleSubmit(submit)}>{children}</form>
+    </FormProvider>
   );
 };
 

@@ -21,6 +21,7 @@
     "react": "^18",
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^18",
+    "react-hook-form": "^7.51.5",
     "react-rating": "^2.0.5",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.33.3"
