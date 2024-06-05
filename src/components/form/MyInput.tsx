@@ -6,15 +6,30 @@ type TInputProps = {
   label?: string;
   placeholder?: string;
   sx?: SxProps;
+  size?: "small" | "medium";
 };
 
-const MyInput = ({ name, type, label, placeholder, sx }: TInputProps) => {
+const MyInput = ({
+  name,
+  type,
+  label,
+  placeholder,
+  sx,
+  size = "small",
+}: TInputProps) => {
   return (
     <>
       <Controller
         name={name}
         render={({ field }) => (
-          <TextField {...field} type="text" placeholder={placeholder} />
+          <TextField
+            {...field}
+            label={label}
+            type="text"
+            placeholder={placeholder}
+            size={size}
+            sx={{ ...sx }}
+          />
         )}
       />
     </>

@@ -1,3 +1,4 @@
+"use client";
 import assets from "@/assets";
 import MyForm from "@/components/form/MyForm";
 import MyInput from "@/components/form/MyInput";
@@ -44,7 +45,7 @@ const LoginPage = () => {
             <Typography component="p">
               Login to explore more from our site
             </Typography>
-            <Box>
+            <Box mt={3}>
               <MyForm onSubmit={handleLogin}>
                 <MyInput type="text" name="email" label="Email:" />
               </MyForm>
