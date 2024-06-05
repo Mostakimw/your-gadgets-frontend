@@ -1,9 +1,16 @@
 import assets from "@/assets";
+import MyForm from "@/components/form/MyForm";
+import MyInput from "@/components/form/MyInput";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { FieldValues } from "react-hook-form";
 
 const LoginPage = () => {
+  const handleLogin = (data: FieldValues) => {
+    console.log(data);
+  };
+
   return (
     <Box
       sx={{ backgroundColor: "#E7E2FF" }}
@@ -37,6 +44,11 @@ const LoginPage = () => {
             <Typography component="p">
               Login to explore more from our site
             </Typography>
+            <Box>
+              <MyForm onSubmit={handleLogin}>
+                <MyInput type="text" name="email" label="Email:" />
+              </MyForm>
+            </Box>
           </Box>
           {/* right side */}
           <Box
