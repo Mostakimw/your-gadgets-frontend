@@ -2,17 +2,26 @@
 import assets from "@/assets";
 import MyForm from "@/components/form/MyForm";
 import MyInput from "@/components/form/MyInput";
-import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FieldValues } from "react-hook-form";
-import loginBg from "./../../assets/loginBg.svg";
+
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const LoginPage = () => {
   const handleLogin = (data: FieldValues) => {
     console.log(data);
   };
-  console.log(assets.loginBg);
   return (
     <Box
       sx={{ backgroundColor: "#E7E2FF" }}
@@ -52,7 +61,7 @@ const LoginPage = () => {
             <Typography component="p">
               Login to explore more from our site
             </Typography>
-            <Box mt={3}>
+            <Box mt={5}>
               <MyForm onSubmit={handleLogin}>
                 <Grid container spacing={3}>
                   <Grid item xs={24}>
@@ -72,7 +81,43 @@ const LoginPage = () => {
                     />
                   </Grid>
                 </Grid>
-                <Button sx={{ mt: 3, width: "50%" }}>Login</Button>
+                <Stack direction="row" justifyContent="space-between">
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 0,
+                    }}
+                  >
+                    <Checkbox {...label} />
+                    <Typography component="small">Remember me</Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      "& a:hover:": { color: "blue" },
+                    }}
+                  >
+                    <Typography
+                      component={Link}
+                      href="/forgot-password"
+                      sx={{
+                        "&:hover": {
+                          textDecoration: "underline",
+                          color: "#3B82F6",
+                        },
+                      }}
+                    >
+                      Forgot Password?
+                    </Typography>
+                  </Box>
+                </Stack>
+                <Box>
+                  <Button type="submit" sx={{ mt: 2, width: "50%" }}>
+                    Login
+                  </Button>
+                </Box>
               </MyForm>
             </Box>
           </Box>
