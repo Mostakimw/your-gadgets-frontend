@@ -2,7 +2,7 @@
 import assets from "@/assets";
 import MyForm from "@/components/form/MyForm";
 import MyInput from "@/components/form/MyInput";
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import { FieldValues } from "react-hook-form";
@@ -31,13 +31,19 @@ const LoginPage = () => {
           borderRadius: 3,
         }}
       >
-        <Stack direction="row" sx={{ height: "100%" }}>
+        <Stack
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ height: "100%" }}
+        >
           <Box
             sx={{
               padding: "20px 15px",
               maxWidth: "400px",
               width: "100%",
               height: "full",
+              px: 3,
             }}
           >
             <Typography variant="h5" fontWeight={600}>
@@ -48,7 +54,25 @@ const LoginPage = () => {
             </Typography>
             <Box mt={3}>
               <MyForm onSubmit={handleLogin}>
-                <MyInput type="text" name="email" label="Email:" />
+                <Grid container spacing={3}>
+                  <Grid item xs={24}>
+                    <MyInput
+                      type="text"
+                      name="email"
+                      label="Email:"
+                      fullWidth={true}
+                    />
+                  </Grid>
+                  <Grid item xs={24}>
+                    <MyInput
+                      type="password"
+                      name="password"
+                      label="Password:"
+                      fullWidth={true}
+                    />
+                  </Grid>
+                </Grid>
+                <Button sx={{ mt: 3, width: "50%" }}>Login</Button>
               </MyForm>
             </Box>
           </Box>
