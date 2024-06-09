@@ -13,15 +13,15 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FieldValues } from "react-hook-form";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-const LoginPage = () => {
-  const handleLogin = (data: FieldValues) => {
+const RegisterPage = () => {
+  const handleRegister = (data: FieldValues) => {
     console.log(data);
   };
+
   return (
     <Box
       sx={{ backgroundColor: "#E7E2FF" }}
@@ -56,13 +56,13 @@ const LoginPage = () => {
             }}
           >
             <Typography variant="h5" fontWeight={600}>
-              Login Page
+              Register Page
             </Typography>
             <Typography component="p">
-              Login to explore more from our site
+              Register to see the magic of our website
             </Typography>
             <Box mt={5}>
-              <MyForm onSubmit={handleLogin}>
+              <MyForm onSubmit={handleRegister}>
                 <Grid container spacing={3}>
                   <Grid item xs={24}>
                     <MyInput
@@ -175,4 +175,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

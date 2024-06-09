@@ -7,6 +7,7 @@ type TInputProps = {
   placeholder?: string;
   sx?: SxProps;
   size?: "small" | "medium";
+  fullWidth?: boolean;
 };
 
 const MyInput = ({
@@ -16,6 +17,7 @@ const MyInput = ({
   placeholder,
   sx,
   size = "small",
+  fullWidth,
 }: TInputProps) => {
   return (
     <>
@@ -28,6 +30,7 @@ const MyInput = ({
             type="text"
             placeholder={placeholder}
             size={size}
+            fullWidth={fullWidth}
             sx={{ ...sx }}
           />
         )}
