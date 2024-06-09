@@ -2,16 +2,17 @@
 import assets from "@/assets";
 import MyForm from "@/components/form/MyForm";
 import MyInput from "@/components/form/MyInput";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import { FieldValues } from "react-hook-form";
+import loginBg from "./../../assets/loginBg.svg";
 
 const LoginPage = () => {
   const handleLogin = (data: FieldValues) => {
     console.log(data);
   };
-
+  console.log(assets.loginBg);
   return (
     <Box
       sx={{ backgroundColor: "#E7E2FF" }}
@@ -54,24 +55,47 @@ const LoginPage = () => {
           {/* right side */}
           <Box
             sx={{
-              backgroundColor: "purple",
+              height: "500px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
               maxWidth: "400px",
               width: "100%",
               borderRadius: "0 24px 24px 0",
-              height: "full",
+              overflow: "hidden",
             }}
           >
+            <Paper
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                zIndex: 1,
+              }}
+            >
+              <Image
+                src={assets.loginBg}
+                layout="fill"
+                objectFit="cover"
+                alt="Background Image"
+              />
+            </Paper>
             <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              height="100%"
-              // sx={{ backgroundColor: "red" }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+                zIndex: 2,
+              }}
             >
               <Image
                 src={assets.login}
-                height={300}
-                width={300}
+                height={400}
+                width={400}
                 alt="Login Image"
               />
             </Box>
