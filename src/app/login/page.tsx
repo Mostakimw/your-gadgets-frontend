@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   Checkbox,
+  Container,
   Grid,
   Paper,
   Stack,
@@ -29,6 +30,7 @@ const LoginPage = () => {
       justifyContent="center"
       alignItems="center"
       minHeight="100vh"
+      padding={{ md: "0 20px" }}
     >
       <Box
         sx={{
@@ -41,7 +43,7 @@ const LoginPage = () => {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           justifyContent="center"
           alignItems="center"
           sx={{ height: "100%" }}
@@ -142,13 +144,13 @@ const LoginPage = () => {
           <Box
             sx={{
               height: "500px",
-              display: "flex",
+              display: { xs: "hidden", md: "flex" },
               justifyContent: "center",
               alignItems: "center",
               position: "relative",
               maxWidth: "400px",
               width: "100%",
-              borderRadius: "0 24px 24px 0",
+              borderRadius: { xs: 0, md: "0 24px 24px 0" },
               overflow: "hidden",
             }}
           >

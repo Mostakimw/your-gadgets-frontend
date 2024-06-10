@@ -14,15 +14,9 @@ const Banner = () => {
         container
         spacing={4}
         alignItems="center"
-        // marginTop={2}
         sx={{ marginTop: { xs: 0, md: 4, lg: 2 } }}
       >
-        <Grid
-          item
-          md={12}
-          lg={5}
-          sx={{ order: { xs: 2, md: 2, lg: 1 }, marginTop: { xs: 7} }}
-        >
+        <Grid item md={12} lg={5} sx={{ order: { xs: 2, md: 2, lg: 1 } }}>
           <Typography variant="h4" fontWeight={600} color="body1">
             Crafting Comfort, Redefining Spaces. Home, Your Signature!
           </Typography>
@@ -50,10 +44,21 @@ const Banner = () => {
           lg={7}
           sx={{
             order: { md: 1, lg: 2 },
-            height: "70vh",
-            width: "60vw",
+            height: { xs: "40vh", sm: "50vh", md: "60vh", lg: "70vh" },
+            width: { xs: "90vw", sm: "80vw", md: "70vw", lg: "60vw" },
             marginTop: 5,
-            "& img": { borderRadius: "15px", height: "70vh", width: "100%" },
+            "& .carousel .slide": {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%", // Ensures each slide takes the full height of the container
+            },
+            "& img": {
+              borderRadius: "15px",
+              height: "100%", // Ensures the image fills the height of the container
+              width: "100%", // Ensures the image fills the width of the container
+              objectFit: "cover", // Ensures the image covers the entire container
+            },
           }}
         >
           <Carousel
@@ -64,16 +69,16 @@ const Banner = () => {
             showArrows={true}
           >
             <div>
-              <Image src={banner1} alt="banner 1" />
+              <Image src={banner2} alt="banner 1" />
             </div>
             <div>
-              <Image src={banner2} alt="banner 2" />
+              <Image src={banner1} alt="banner 2" />
             </div>
             <div>
-              <Image src={banner1} alt="banner 1" />
+              <Image src={banner2} alt="banner 1" />
             </div>
             <div>
-              <Image src={banner2} alt="banner 2" />
+              <Image src={banner1} alt="banner 2" />
             </div>
           </Carousel>
         </Grid>
