@@ -1,4 +1,4 @@
-import { SxProps, TextField } from "@mui/material";
+import { SxProps, TextField, Typography } from "@mui/material";
 import { Controller } from "react-hook-form";
 type TInputProps = {
   name: string;
@@ -8,6 +8,7 @@ type TInputProps = {
   sx?: SxProps;
   size?: "small" | "medium";
   fullWidth?: boolean;
+  labelText?: string;
 };
 
 const MyInput = ({
@@ -18,9 +19,15 @@ const MyInput = ({
   sx,
   size = "small",
   fullWidth,
+  labelText,
 }: TInputProps) => {
   return (
     <>
+      {labelText && (
+        <Typography variant="subtitle1" fontWeight={600}>
+          {labelText}
+        </Typography>
+      )}
       <Controller
         name={name}
         render={({ field }) => (

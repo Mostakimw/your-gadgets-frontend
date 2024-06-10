@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   Checkbox,
+  Container,
   Grid,
   Paper,
   Stack,
@@ -29,6 +30,7 @@ const LoginPage = () => {
       justifyContent="center"
       alignItems="center"
       minHeight="100vh"
+      padding={{ md: "0 20px" }}
     >
       <Box
         sx={{
@@ -41,7 +43,7 @@ const LoginPage = () => {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           justifyContent="center"
           alignItems="center"
           sx={{ height: "100%" }}
@@ -69,6 +71,7 @@ const LoginPage = () => {
                       type="text"
                       name="email"
                       label="Email:"
+                      placeholder="Email"
                       fullWidth={true}
                     />
                   </Grid>
@@ -96,7 +99,6 @@ const LoginPage = () => {
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      "& a:hover:": { color: "blue" },
                     }}
                   >
                     <Typography
@@ -119,19 +121,36 @@ const LoginPage = () => {
                   </Button>
                 </Box>
               </MyForm>
+              {/* dont have an account  */}
+              <Box mt={4}>
+                <Typography
+                  sx={{
+                    "& a": {
+                      color: "#0066c0",
+                    },
+                    "& a:hover": {
+                      textDecoration: "underline",
+                      color: "#0066c0",
+                    },
+                  }}
+                >
+                  Don&apos;t Have Account?{" "}
+                  <Link href="/register">Create An Account</Link>
+                </Typography>
+              </Box>
             </Box>
           </Box>
           {/* right side */}
           <Box
             sx={{
               height: "500px",
-              display: "flex",
+              display: { xs: "hidden", md: "flex" },
               justifyContent: "center",
               alignItems: "center",
               position: "relative",
               maxWidth: "400px",
               width: "100%",
-              borderRadius: "0 24px 24px 0",
+              borderRadius: { xs: 0, md: "0 24px 24px 0" },
               overflow: "hidden",
             }}
           >
