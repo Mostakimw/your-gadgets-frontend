@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import Topbar from "./Topbar";
 
 interface THamburgerMenuProps {
   open: boolean;
@@ -31,10 +32,10 @@ const menuItems = (
       Flash Sale
     </Typography>
     <Typography component={Link} href="/about-us" fontWeight={600}>
-      About Us
+      About
     </Typography>
     <Typography component={Link} href="/contact-us" fontWeight={600}>
-      Contact Us
+      Contact
     </Typography>
     <Typography component={Link} href="/dashboard" fontWeight={600}>
       Dashboard
@@ -61,14 +62,9 @@ const Navbar = () => {
       <Box
         sx={{
           backgroundColor: "primary.main",
-          textAlign: "center",
-          py: 2,
-          color: "white",
         }}
       >
-        <h1 className="font-bold text-2xl text-center font-mono">
-          Welcome to Gadgets Shine
-        </h1>
+        <Topbar />
       </Box>
       {/* nav items start */}
       <Box

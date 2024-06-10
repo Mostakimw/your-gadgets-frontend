@@ -123,6 +123,9 @@ const LoginPage = () => {
               <Box mt={4}>
                 <Typography
                   sx={{
+                    "& a": {
+                      color: "#0066c0",
+                    },
                     "& a:hover": {
                       textDecoration: "underline",
                       color: "#0066c0",
