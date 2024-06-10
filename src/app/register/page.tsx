@@ -1,21 +1,10 @@
 "use client";
-import assets from "@/assets";
 import MyForm from "@/components/form/MyForm";
 import MyInput from "@/components/form/MyInput";
-import {
-  Box,
-  Button,
-  Checkbox,
-  Grid,
-  Paper,
-  Stack,
-  Typography,
-} from "@mui/material";
-import Image from "next/image";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import { FieldValues } from "react-hook-form";
-
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const RegisterPage = () => {
   const handleRegister = (data: FieldValues) => {
@@ -32,141 +21,106 @@ const RegisterPage = () => {
     >
       <Box
         sx={{
-          maxWidth: "800px",
-          width: "100%",
-          height: "500px",
           backgroundColor: "white",
           boxShadow: "4px white",
           borderRadius: 3,
+          maxWidth: 400,
+          width: "100%",
+          padding: "10px 20px",
         }}
       >
-        <Stack
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ height: "100%" }}
-        >
+        <Stack direction="row" justifyContent="center" alignItems="center">
           <Box
             sx={{
               padding: "20px 15px",
-              maxWidth: "400px",
-              width: "100%",
-              height: "full",
               px: 3,
             }}
           >
             <Typography variant="h5" fontWeight={600}>
-              Register Page
+              Create Account
             </Typography>
-            <Typography component="p">
-              Register to see the magic of our website
+            <Typography component="p" mt={1}>
+              Create an account to see the magic of our website
             </Typography>
-            <Box mt={5}>
+            <Box mt={3}>
               <MyForm onSubmit={handleRegister}>
                 <Grid container spacing={3}>
                   <Grid item xs={24}>
                     <MyInput
                       type="text"
-                      name="email"
-                      label="Email:"
+                      name="name"
+                      labelText="Name:"
                       fullWidth={true}
+                      placeholder="First and last name"
+                    />
+                  </Grid>
+                  <Grid item xs={24}>
+                    <MyInput
+                      type="text"
+                      name="email"
+                      labelText="Email:"
+                      fullWidth={true}
+                      placeholder="Type your email"
                     />
                   </Grid>
                   <Grid item xs={24}>
                     <MyInput
                       type="password"
                       name="password"
-                      label="Password:"
+                      labelText="Password:"
+                      fullWidth={true}
+                      placeholder="At least 6 character"
+                    />
+                  </Grid>
+                  <Grid item xs={24}>
+                    <MyInput
+                      type="password"
+                      name="confirmPassword"
+                      labelText="Re-enter Password:"
                       fullWidth={true}
                     />
                   </Grid>
                 </Grid>
-                <Stack direction="row" justifyContent="space-between">
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 0,
-                    }}
-                  >
-                    <Checkbox {...label} />
-                    <Typography component="small">Remember me</Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      "& a:hover:": { color: "blue" },
-                    }}
-                  >
-                    <Typography
-                      component={Link}
-                      href="/forgot-password"
-                      sx={{
-                        "&:hover": {
-                          textDecoration: "underline",
-                          color: "#3B82F6",
-                        },
-                      }}
-                    >
-                      Forgot Password?
-                    </Typography>
-                  </Box>
-                </Stack>
                 <Box>
-                  <Button type="submit" sx={{ mt: 2, width: "50%" }}>
-                    Login
+                  <Button type="submit" sx={{ mt: 3, width: "100%" }}>
+                    Continue
                   </Button>
                 </Box>
               </MyForm>
-            </Box>
-          </Box>
-          {/* right side */}
-          <Box
-            sx={{
-              height: "500px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              maxWidth: "400px",
-              width: "100%",
-              borderRadius: "0 24px 24px 0",
-              overflow: "hidden",
-            }}
-          >
-            <Paper
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                zIndex: 1,
-              }}
-            >
-              <Image
-                src={assets.loginBg}
-                layout="fill"
-                objectFit="cover"
-                alt="Background Image"
-              />
-            </Paper>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-                zIndex: 2,
-              }}
-            >
-              <Image
-                src={assets.login}
-                height={400}
-                width={400}
-                alt="Login Image"
-              />
+              {/* already have an account  */}
+              <Stack direction="row" mt={4}>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    "& a": {
+                      color: "#0066c0",
+                    },
+                    "& a:hover": {
+                      textDecoration: "underline",
+                      color: "primary.main",
+                    },
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  Already Have an Account?{" "}
+                  <Typography
+                    component={Link}
+                    href="/register"
+                    sx={{ display: "flex", alignItems: "center" }}
+                  >
+                    <Typography
+                      variant="body2"
+                      component={Link}
+                      href="/register"
+                    >
+                      Login
+                    </Typography>
+                    <ArrowRightIcon fontSize="small" />
+                  </Typography>
+                </Typography>
+              </Stack>
             </Box>
           </Box>
         </Stack>

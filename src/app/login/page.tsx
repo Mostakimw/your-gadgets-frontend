@@ -69,6 +69,7 @@ const LoginPage = () => {
                       type="text"
                       name="email"
                       label="Email:"
+                      placeholder="Email"
                       fullWidth={true}
                     />
                   </Grid>
@@ -96,7 +97,6 @@ const LoginPage = () => {
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      "& a:hover:": { color: "blue" },
                     }}
                   >
                     <Typography
@@ -119,6 +119,20 @@ const LoginPage = () => {
                   </Button>
                 </Box>
               </MyForm>
+              {/* dont have an account  */}
+              <Box mt={4}>
+                <Typography
+                  sx={{
+                    "& a:hover": {
+                      textDecoration: "underline",
+                      color: "#0066c0",
+                    },
+                  }}
+                >
+                  Don&apos;t Have Account?{" "}
+                  <Link href="/register">Create An Account</Link>
+                </Typography>
+              </Box>
             </Box>
           </Box>
           {/* right side */}
