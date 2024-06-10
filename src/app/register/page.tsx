@@ -1,7 +1,7 @@
 "use client";
 import MyForm from "@/components/form/MyForm";
 import MyInput from "@/components/form/MyInput";
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import { FieldValues } from "react-hook-form";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
@@ -26,7 +26,7 @@ const RegisterPage = () => {
           borderRadius: 3,
           maxWidth: 400,
           width: "100%",
-          padding: "10px 20px",
+          padding: "0 20px",
         }}
       >
         <Stack direction="row" justifyContent="center" alignItems="center">
@@ -44,7 +44,7 @@ const RegisterPage = () => {
             </Typography>
             <Box mt={3}>
               <MyForm onSubmit={handleRegister}>
-                <Grid container spacing={3}>
+                <Grid container spacing={2}>
                   <Grid item xs={24}>
                     <MyInput
                       type="text"
@@ -87,8 +87,67 @@ const RegisterPage = () => {
                   </Button>
                 </Box>
               </MyForm>
+              {/* accepting terms and condition */}
+              <Box mt={2} mb={3}>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    "& a": {
+                      color: "#0066c0",
+                    },
+                    "& a:hover": {
+                      textDecoration: "underline",
+                      color: "primary.main",
+                    },
+                  }}
+                >
+                  By creating an account, you agree to our{" "}
+                  <Typography variant="body2" component={Link} href="/terms">
+                    Terms and Services
+                  </Typography>{" "}
+                  &{" "}
+                  <Typography variant="body2" component={Link} href="/terms">
+                    Conditions of Use
+                  </Typography>
+                </Typography>
+              </Box>
+
+              <Divider />
+
+              {/* create account as a seller */}
+              <Stack mt={3}>
+                <Typography fontWeight={600} variant="body2">
+                  Be a Seller
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    "& a": {
+                      color: "#0066c0",
+                    },
+                    "& a:hover": {
+                      textDecoration: "underline",
+                      color: "primary.main",
+                    },
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <Typography
+                      variant="body2"
+                      component={Link}
+                      href="/seller-login"
+                    >
+                      Create a free business account
+                    </Typography>
+                  </Typography>
+                </Typography>
+              </Stack>
+
               {/* already have an account  */}
-              <Stack direction="row" mt={4}>
+              <Stack mt={3}>
                 <Typography
                   variant="body2"
                   sx={{
@@ -105,16 +164,8 @@ const RegisterPage = () => {
                   }}
                 >
                   Already Have an Account?{" "}
-                  <Typography
-                    component={Link}
-                    href="/register"
-                    sx={{ display: "flex", alignItems: "center" }}
-                  >
-                    <Typography
-                      variant="body2"
-                      component={Link}
-                      href="/register"
-                    >
+                  <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <Typography variant="body2" component={Link} href="/login">
                       Login
                     </Typography>
                     <ArrowRightIcon fontSize="small" />
