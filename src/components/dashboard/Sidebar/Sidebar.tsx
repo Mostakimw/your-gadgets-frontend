@@ -11,18 +11,18 @@ const Sidebar = () => {
           md: "100vh",
         },
         padding: 2,
-        position: "sticky", // Set position to fixed
-        top: 0, // Align the sidebar to the top of the viewport
-        left: 0, // Align the sidebar to the left of the viewport
+        position: "sticky",
+        top: 0,
+        left: 0,
         zIndex: 1000,
       }}
     >
       <Stack>
         <Box>
           <Typography component={Link} href="/" fontWeight={600} variant="h4">
-            Your{" "}
+            Gadgets{" "}
             <Box component="span" color="primary.main">
-              Gadgets
+              Shine
             </Box>
           </Typography>
           <Stack

@@ -51,13 +51,13 @@ const Banner = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height: "100%", // Ensures each slide takes the full height of the container
+              height: "100%",
             },
             "& img": {
               borderRadius: "15px",
-              height: "100%", // Ensures the image fills the height of the container
-              width: "100%", // Ensures the image fills the width of the container
-              objectFit: "cover", // Ensures the image covers the entire container
+              height: "100%",
+              width: "100%",
+              objectFit: "cover",
             },
           }}
         >

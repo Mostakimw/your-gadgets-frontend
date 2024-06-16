@@ -108,11 +108,11 @@ const Topbar = () => {
           <Stack direction="row" alignItems="center" gap={5} ml={2}>
             <Typography title="View Cart" component={Link} href="/cart">
               <StyledBadge badgeContent={1} color="secondary">
-                <AddShoppingCartIcon color="secondary" sx={{ fontSize: 40 }} />
+                <AddShoppingCartIcon sx={{ fontSize: 40, color: "white" }} />
               </StyledBadge>
             </Typography>
             <Typography title="View Offers" component={Link} href="/offers">
-              <RedeemIcon color="secondary" sx={{ fontSize: 40 }} />
+              <RedeemIcon sx={{ fontSize: 40, color: "white" }} />
             </Typography>
           </Stack>
         </Stack>
