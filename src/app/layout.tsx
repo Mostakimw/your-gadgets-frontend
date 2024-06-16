@@ -4,11 +4,10 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import Providers from "@/lib/Providers/Providers";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Gadgets",
+  title: "Gadgets Shine",
   description: "Your daily life needs here",
 };
 
